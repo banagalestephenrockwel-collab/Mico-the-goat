@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script>
+var CONFIG = {
+  photos: {
+    main:      "1.jpg",   
+    polaroid1: "2.jpg",   
+    polaroid2: "3.jpg"    
+  },
+
+  
+  
+
+  
+  introTitle: "Happy Teacher's Day,\n Sir",    
+  introSub:   "Pa-click na lang",          
+  
+  noteMain:     "Na-aapreciate ka namin.\nTandaan mo 'yan sir'.",                
+
+  
+  caption1: "Our favorite teacher",
+
+  
+  closing: "Salamat sa lahat, Sir!",
+
+  
+  
+  letterBody: [                    
+    "Salamat po Sir, sa lahat ng mga lessons,",
+    "Wag mo susukuan ang buhay sir, kukunin pa kitang ninong ng mga anak kong puro panganay.",
+    "Sana alam mo kung gaano ka namin kamahal. Tara shot na"
+  ],
+  
+};
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mico the goat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Archivo:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+
+</style>
+</head>
+<body>
+
+
+<section id="intro">
+  <h1 data-t="introTitle"></h1>
+  <div class="env" id="env">
+    <div class="back"></div>
+    <div class="letter"></div>
+    <div class="front"></div>
+    <div class="flap"></div>
+    <div class="pulse"></div>
+    <button class="seal" id="seal" aria-label="Break the wax seal to open">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><radialGradient id="g" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#f0d98a"/><stop offset=".55" stop-color="#c9a24b"/><stop offset="1" stop-color="#8f6f26"/></radialGradient></defs>
+        <path d="M50 4c9 0 12 6 20 8s14 6 15 15 6 12 8 20-3 12-8 20-6 14-15 17-12 7-20 7-12-5-20-7-14-8-15-17-6-12-8-20 3-12 8-20 6-12 15-15 11-8 20-8z" fill="url(#g)"/>
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#8f6f26" stroke-width="2"/>
+        <path d="M50 28l6.5 14 15 1.6-11.3 10 3.3 14.8L50 60.7 36.5 68.4l3.3-14.8-11.3-10 15-1.6z" fill="#8f6f26" opacity=".85"/>
+        <path d="M50 28l6.5 14 15 1.6-11.3 10 3.3 14.8L50 60.7 36.5 68.4l3.3-14.8-11.3-10 15-1.6z" fill="none" stroke="#f6e6a8" stroke-width=".8" opacity=".7"/>
+      </svg>
+    </button>
+  </div>
+  <p data-t="introSub"></p>
+</section>
+
+
+<main id="board">
+  <div class="stage">
+
+    <div class="item" id="e1">
+      <div class="eback"></div>
+      <div class="eflap"></div>
+      <div class="photo">
+        <div class="ph"><svg viewBox="0 0 64 64" fill="currentColor"><circle cx="32" cy="22" r="11"/><path d="M8 58c2-14 14-22 24-22s22 8 24 22z"/></svg>Your photo here</div>
+      </div>
+      <div class="efront"></div>
+    </div>
+
+    <div class="item" id="note-bg"></div>
+    <div class="item" id="note">
+      <div class="clip"></div>
+      <p class="l" data-t="noteMain"></p>
+      <p class="h" data-t="noteGreeting"></p>
+    </div>
+
+    <div class="item pola" id="p1">
+      <div class="tape"></div>
+      <div class="photo"><div class="ph"><svg viewBox="0 0 64 64" fill="currentColor"><circle cx="32" cy="22" r="11"/><path d="M8 58c2-14 14-22 24-22s22 8 24 22z"/></svg>Your photo here</div></div>
+      <div class="cap" data-t="caption1"></div>
+    </div>
+    <div class="item pola" id="p2">
+      <div class="tape"></div>
+      <div class="photo"><div class="ph"><svg viewBox="0 0 64 64" fill="currentColor"><circle cx="32" cy="22" r="11"/><path d="M8 58c2-14 14-22 24-22s22 8 24 22z"/></svg>Your photo here</div></div>
+      <div class="cap" data-t="caption2"></div>
+    </div>
+
+    <button class="item" id="e2" aria-label="Open the letter">
+      <div class="b"></div><div class="fr"></div><div class="fr2"></div>
+      <svg class="s" viewBox="0 0 100 100" aria-hidden="true"><use href="#sealshape"/></svg>
+      <div class="t">Click ulit haha</div>
+    </button>
+
+    <svg class="item" id="stars" viewBox="0 0 150 90" aria-hidden="true">
+      <g fill="#c9a24b"><path id="st" d="M30 8l5 12 13 1-10 9 3 13-11-7-11 7 3-13-10-9 13-1z"/><use href="#st" transform="translate(70 22) scale(.7)"/><use href="#st" transform="translate(95 -4) scale(.5)"/></g>
+    </svg>
+
+    <div class="thanks" data-t="closing"></div>
+  </div>
+  
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="sealshape">
+      <path d="M50 4c9 0 12 6 20 8s14 6 15 15 6 12 8 20-3 12-8 20-6 14-15 17-12 7-20 7-12-5-20-7-14-8-15-17-6-12-8-20 3-12 8-20 6-12 15-15 11-8 20-8z" fill="#c9a24b"/>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="#8f6f26" stroke-width="2"/>
+      <path d="M50 28l6.5 14 15 1.6-11.3 10 3.3 14.8L50 60.7 36.5 68.4l3.3-14.8-11.3-10 15-1.6z" fill="#8f6f26"/>
+    </g>
+  </defs>
+</svg>
+
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="lt">
+  <div class="sheet">
+    <button class="close" id="close" aria-label="Close letter">&times;</button>
+    <h2 id="lt" data-t="letterTitle"></h2>
+    <div class="body" id="letterBody"></div>
+    <div class="sign" data-t="letterSign"></div>
+    
+  </div>
+</div>
+
+<script>
+(function(){
+  
+  function setText(el,txt){
+    el.innerHTML='';
+    String(txt||'').split('\n').forEach(function(line,i){
+      if(i) el.appendChild(document.createElement('br'));
+      el.appendChild(document.createTextNode(line));
+    });
+  }
+  document.querySelectorAll('[data-t]').forEach(function(el){
+    setText(el,CONFIG[el.getAttribute('data-t')]);
+  });
+  var lb=document.getElementById('letterBody');
+  CONFIG.letterBody.forEach(function(t){
+    if(!t) return;
+    var p=document.createElement('p');setText(p,t);lb.appendChild(p);
+  });
+  function setPhoto(sel,url){
+    if(!url) return;
+    var el=document.querySelector(sel);
+    if(!el) return;
+    el.style.backgroundImage='url("'+String(url).replace(/"/g,'%22')+'")';
+    el.classList.add('has');
+  }
+  setPhoto('#e1 .photo',CONFIG.photos.main);
+  setPhoto('#p1 .photo',CONFIG.photos.polaroid1);
+  setPhoto('#p2 .photo',CONFIG.photos.polaroid2);
+
+  var env=document.getElementById('env'),seal=document.getElementById('seal'),
+      intro=document.getElementById('intro'),board=document.getElementById('board');
+  seal.addEventListener('click',function(){
+    env.classList.add('open');
+    setTimeout(function(){intro.classList.add('gone')},1300);
+    setTimeout(function(){intro.style.display='none';board.classList.add('show');window.scrollTo(0,0)},1950);
+  });
+
+  
+
+  
+  var m=document.getElementById('modal');
+  function open(){m.classList.add('show');document.getElementById('close').focus()}
+  function close(){m.classList.remove('show')}
+  document.getElementById('e2').addEventListener('click',open);
+  document.getElementById('close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+</script>
+</body>
+</html>
